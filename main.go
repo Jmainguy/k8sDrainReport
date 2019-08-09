@@ -38,8 +38,15 @@ func main() {
 	if err != nil {
 		panic(err.Error())
 	}
-	fmt.Printf("There are %d pods in the cluster\n", len(pods.Items))
 
+	for _, v := range pods.Items {
+        if v.Status.Phase == "Running" {
+            i++
+        }
+    }
+    fmt.Printf("Cluster: %s\n", config.Host)
+    fmt.Printf("There are %d running pods in the cluster\n", i)
+    i = 0
     fmt.Println("========================================")
     fmt.Println("Pods without owners")
     fmt.Println("========================================")
@@ -48,8 +55,11 @@ func main() {
 		// List pods without ownership
 		if len(v.ObjectMeta.OwnerReferences) == 0 {
             if v.Status.Phase == "Running" {
-			    fmt.Printf("Namespace: %s, Name: %s\n", v.ObjectMeta.Namespace, v.ObjectMeta.Name)
-			    i++
+                // Ignore kube-system, it has non owned pods, this is normal.
+                if v.ObjectMeta.Namespace != "kube-system" {
+	    		    fmt.Printf("Namespace: %s, Name: %s, NodeName: %s\n", v.ObjectMeta.Namespace, v.ObjectMeta.Name, v.Spec.NodeName)
+    			    i++
+                }
             }
 		}
 	}
