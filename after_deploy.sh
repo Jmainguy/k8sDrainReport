@@ -7,7 +7,7 @@ git clone "https://$GITHUB_TOKEN@github.com/$REPO.git"
 cd $DIRNAME
 
 # Set release tag
-LASTRELEASE=$(curl --silent "https://api.github.com/repos/$REPO/releases/latest" | jq -r .tag_name)
+LASTRELEASE=$(curl --silent "https://$GITHUB_TOKEN@api.github.com/repos/$REPO/releases/latest" | jq -r .tag_name)
 echo "LASTRELEASE: $LASTRELEASE"
 TODAY=$(date +"%Y-%m-%d")
 echo "TODAY: $TODAY"
