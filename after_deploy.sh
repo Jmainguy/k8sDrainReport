@@ -5,6 +5,10 @@ export DIRNAME=$(echo $METAREPO | awk -F'/' '{print $2}')
 # Set this repo name, to gather changelog from here, to add to meta repo.
 export THISREPO="jmainguy/k8sDrainReport"
 
+# Set up git user name and tag this commit
+git config --local user.name "Jonathan Mainguy"
+git config --local user.email "jon@soh.re"
+
 git clone "https://$GITHUB_TOKEN@github.com/$METAREPO.git"
 cd $DIRNAME
 
