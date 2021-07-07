@@ -18,3 +18,21 @@ go get k8s.io/client-go@v12.0.0
 go build
 ```
 
+
+## Examples
+
+### Run without any cordoned/drained nodes
+
+```
+$ k8sDrainReport
+Cluster: https://master.atl1.ocp.bandwidth.com:8443
+There are 575 running pods in the cluster
+========================================
+Pods without owners
+========================================
+There are 0 pods without ownership
+
+========================================
+Pod Distruption Budget, Potential Issues
+========================================
+```
