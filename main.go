@@ -1,10 +1,12 @@
 package main
 
 import (
+	"context"
 	"flag"
 	"fmt"
 	"os"
 	"path/filepath"
+
 	//"time"
 
 	//"k8s.io/apimachinery/pkg/api/errors"
@@ -34,7 +36,7 @@ func main() {
 		panic(err.Error())
 	}
 	i := 0
-	pods, err := clientset.CoreV1().Pods("").List(metav1.ListOptions{})
+	pods, err := clientset.CoreV1().Pods("").List(context.Background(), metav1.ListOptions{})
 	if err != nil {
 		panic(err.Error())
 	}
@@ -71,11 +73,17 @@ func main() {
 	fmt.Println("Pod Distruption Budget, Potential Issues")
 	fmt.Println("========================================")
 	// Get PodDisruptionBudgets
-	pdbs, err := clientset.PolicyV1beta1().PodDisruptionBudgets("").List(metav1.ListOptions{})
+
+	//pdbs, err := clientset.PolicyV1beta1().PodDisruptionBudgets("").List(context.Background(), metav1.ListOptions{})
+	pdbs, err := clientset.PolicyV1().PodDisruptionBudgets("").List(context.Background(), metav1.ListOptions{})
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 
 	for _, v := range pdbs.Items {
-		if v.Status.PodDisruptionsAllowed == 0 {
-			fmt.Printf("Namespace: %s, Name: %s, DisruptionsAllowed: %d\n", v.ObjectMeta.Namespace, v.ObjectMeta.Name, v.Status.PodDisruptionsAllowed)
+		if v.Status.DisruptionsAllowed == 0 {
+			fmt.Printf("Namespace: %s, Name: %s, DisruptionsAllowed: %d\n", v.ObjectMeta.Namespace, v.ObjectMeta.Name, v.Status.DisruptionsAllowed)
 		}
 	}
 }
