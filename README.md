@@ -12,9 +12,6 @@ Grab Binaries from [The Releases Page](https://github.com/Jmainguy/k8sDrainRepor
 
 ## Build
 ```/bin/bash
-export GO111MODULE=on
-go mod init
-go get k8s.io/client-go@v12.0.0
 go build
 ```
 
