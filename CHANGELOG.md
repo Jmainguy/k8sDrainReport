@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.10](https://github.com/Jmainguy/k8sDrainReport/compare/v0.1.9...v0.1.10) (2024-12-17)
+
+
+### Bug Fixes
+
+* **deps:** update kubernetes packages to v0.32.0 ([c53566e](https://github.com/Jmainguy/k8sDrainReport/commit/c53566eddc5a424161ce64ad607553a18e135e47))
+
 ## [0.1.9](https://github.com/Jmainguy/k8sDrainReport/compare/v0.1.8...v0.1.9) (2024-11-02)
 
 
