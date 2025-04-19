@@ -55,11 +55,11 @@ func main() {
 	// Loop through all pods
 	for _, v := range pods.Items {
 		// List pods without ownership
-		if len(v.ObjectMeta.OwnerReferences) == 0 {
+		if len(v.OwnerReferences) == 0 {
 			if v.Status.Phase == "Running" {
 				// Ignore kube-system, it has non owned pods, this is normal.
-				if v.ObjectMeta.Namespace != "kube-system" {
-					fmt.Printf("Namespace: %s, Name: %s, NodeName: %s\n", v.ObjectMeta.Namespace, v.ObjectMeta.Name, v.Spec.NodeName)
+				if v.Namespace != "kube-system" {
+					fmt.Printf("Namespace: %s, Name: %s, NodeName: %s\n", v.Namespace, v.Name, v.Spec.NodeName)
 					i++
 				}
 			}
@@ -83,7 +83,7 @@ func main() {
 
 	for _, v := range pdbs.Items {
 		if v.Status.DisruptionsAllowed == 0 {
-			fmt.Printf("Namespace: %s, Name: %s, DisruptionsAllowed: %d\n", v.ObjectMeta.Namespace, v.ObjectMeta.Name, v.Status.DisruptionsAllowed)
+			fmt.Printf("Namespace: %s, Name: %s, DisruptionsAllowed: %d\n", v.Namespace, v.Name, v.Status.DisruptionsAllowed)
 		}
 	}
 }
