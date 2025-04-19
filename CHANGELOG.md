@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.12](https://github.com/Jmainguy/k8sDrainReport/compare/v0.1.11...v0.1.12) (2025-04-19)
+
+
+### Bug Fixes
+
+* remove objectmeta references ([9f5a6d3](https://github.com/Jmainguy/k8sDrainReport/commit/9f5a6d32d40a4131ebd477dc1e32ba3a9328638a))
+
 ## [0.1.11](https://github.com/Jmainguy/k8sDrainReport/compare/v0.1.10...v0.1.11) (2025-04-19)
 
 
