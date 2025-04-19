@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.11](https://github.com/Jmainguy/k8sDrainReport/compare/v0.1.10...v0.1.11) (2025-04-19)
+
+
+### Bug Fixes
+
+* update deps ([db7e765](https://github.com/Jmainguy/k8sDrainReport/commit/db7e765b21a4d03373835a5062775997eff0113a))
+
 ## [0.1.10](https://github.com/Jmainguy/k8sDrainReport/compare/v0.1.9...v0.1.10) (2024-12-17)
 
 
