@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/Jmainguy/k8sDrainReport/compare/v0.1.12...v1.0.0) (2025-08-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* Release 1.0
+
+### Features
+
+* Release 1.0 ([aa6f409](https://github.com/Jmainguy/k8sDrainReport/commit/aa6f40935ae6fb1f5bf741884d67f6d0eaceae81))
+
 ## [0.1.12](https://github.com/Jmainguy/k8sDrainReport/compare/v0.1.11...v0.1.12) (2025-04-19)
 
 
