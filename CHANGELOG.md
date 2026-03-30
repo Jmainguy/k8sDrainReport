@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.2](https://github.com/Jmainguy/k8sDrainReport/compare/v1.0.1...v1.0.2) (2026-03-30)
+
+
+### Bug Fixes
+
+* **deps:** update all non-major dependencies ([1dfefa8](https://github.com/Jmainguy/k8sDrainReport/commit/1dfefa860c383ef35bccb6c30238fbfd0bbc87ab))
+* **deps:** update all non-major dependencies ([130dc26](https://github.com/Jmainguy/k8sDrainReport/commit/130dc269ca6ca3c0fe381437ed343d0bb149e6cd))
+* **deps:** update all non-major dependencies to v0.34.2 ([9ad7663](https://github.com/Jmainguy/k8sDrainReport/commit/9ad76630ab2319af41014f414adc9be2806881ef))
+* **deps:** update all non-major dependencies to v0.34.2 ([f1d46a6](https://github.com/Jmainguy/k8sDrainReport/commit/f1d46a689d3b89f69773093f6810df6c12df5333))
+
 ## [1.0.1](https://github.com/Jmainguy/k8sDrainReport/compare/v1.0.0...v1.0.1) (2025-09-11)
 
 
