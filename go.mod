@@ -2,7 +2,7 @@ module github.com/jmainguy/k8sDrainReport
 
 go 1.26.0
 
-toolchain go1.27.1
+toolchain go1.27.2
 
 require (
 	k8s.io/apimachinery v0.37.1
